@@ -1,103 +1,357 @@
 import Image from "next/image";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+import {
+  getFeaturedProducts,
+  getProductsByCategory,
+} from "@/lib/data/products";
+import { Button } from "./components/ui/button";
+import {
+  Card,
+  CardHeader,
+  CardFooter,
+  CardTitle,
+  CardDescription,
+  CardContent,
+} from "./components/ui/Card";
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  const featuredProducts = getFeaturedProducts();
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  return (
+    <div className="flex flex-col">
+      {/* Hero Section */}
+      <section className="relative bg-green-700 text-white">
+        <div className="container mx-auto px-4 py-24 flex flex-col md:flex-row items-center">
+          <div className="md:w-1/2 space-y-6 z-10">
+            <h1 className="text-4xl md:text-5xl font-bold leading-tight">
+              Quality Agricultural Products for Your Farm
+            </h1>
+            <p className="text-lg md:text-xl max-w-md">
+              Amma Agro Agencies provides premium seeds, pesticides, and
+              fertilizers to help your crops thrive.
+            </p>
+            <div className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4 pt-4">
+              <Button
+                asChild
+                size="lg"
+                className="bg-white text-green-700 hover:bg-gray-100"
+              >
+                <Link href="/products">Browse Products</Link>
+              </Button>
+              <Button
+                asChild
+                variant="outline"
+                size="lg"
+                className="border-white text-white hover:bg-green-800"
+              >
+                <Link href="/contact">Contact Us</Link>
+              </Button>
+            </div>
+          </div>
+          <div className="md:w-1/2 mt-12 md:mt-0 flex justify-center">
+            <div className="relative w-full h-[300px] md:h-[400px] rounded-lg overflow-hidden">
+              <Image
+                src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?q=80&w=1000&auto=format&fit=crop"
+                alt="Agriculture field"
+                fill
+                style={{ objectFit: "cover" }}
+                priority
+                className="rounded-lg"
+              />
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        <div className="absolute inset-0 bg-gradient-to-r from-green-800 to-transparent opacity-70" />
+      </section>
+
+      {/* Featured Products Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col md:flex-row justify-between items-baseline mb-10">
+            <div>
+              <h2 className="text-3xl font-bold">Featured Products</h2>
+              <p className="text-gray-600 mt-2">
+                Discover our best-selling agricultural products
+              </p>
+            </div>
+            <Link
+              href="/products"
+              className="mt-4 md:mt-0 text-green-700 hover:text-green-800 flex items-center"
+            >
+              View All Products <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {featuredProducts.map((product) => (
+              <Card
+                key={product.id}
+                className="overflow-hidden flex flex-col h-full hover:shadow-md transition-shadow"
+              >
+                <div className="relative h-48 w-full">
+                  <Image
+                    src={product.image}
+                    alt={product.name}
+                    fill
+                    style={{ objectFit: "cover" }}
+                  />
+                </div>
+                <CardHeader>
+                  <CardTitle className="text-lg font-medium">
+                    {product.name}
+                  </CardTitle>
+                  <CardDescription className="text-sm line-clamp-2">
+                    {product.description}
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="flex-grow">
+                  <div className="flex items-center justify-between">
+                    <span className="text-lg font-bold">
+                      ${product.price.toFixed(2)}
+                    </span>
+                    <span
+                      className={`text-xs px-2 py-1 rounded-full ${
+                        product.stockStatus === "in-stock"
+                          ? "bg-green-100 text-green-800"
+                          : product.stockStatus === "low-stock"
+                          ? "bg-yellow-100 text-yellow-800"
+                          : "bg-red-100 text-red-800"
+                      }`}
+                    >
+                      {product.stockStatus === "in-stock"
+                        ? "In Stock"
+                        : product.stockStatus === "low-stock"
+                        ? "Low Stock"
+                        : "Out of Stock"}
+                    </span>
+                  </div>
+                </CardContent>
+                <CardFooter>
+                  <Button
+                    asChild
+                    className="w-full bg-green-700 hover:bg-green-800"
+                  >
+                    <Link href={`/products/${product.id}`}>View Details</Link>
+                  </Button>
+                </CardFooter>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Categories Section */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-10">
+            Our Product Categories
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {/* Seeds Category */}
+            <Link href="/products?category=seeds" className="group">
+              <div className="relative h-60 rounded-lg overflow-hidden">
+                <Image
+                  src="https://images.unsplash.com/photo-1584813470613-5b1c1cad3a69?q=80&w=600&auto=format&fit=crop"
+                  alt="Seeds"
+                  fill
+                  style={{ objectFit: "cover" }}
+                  className="group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent">
+                  <div className="absolute bottom-0 p-4">
+                    <h3 className="text-xl font-bold text-white">Seeds</h3>
+                    <p className="text-white/80 text-sm mt-1">
+                      High-quality seeds for better yields
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </Link>
+
+            {/* Pesticides Category */}
+            <Link href="/products?category=pesticides" className="group">
+              <div className="relative h-60 rounded-lg overflow-hidden">
+                <Image
+                  src="https://images.unsplash.com/photo-1585673542330-2aa0400ea9b6?q=80&w=600&auto=format&fit=crop"
+                  alt="Pesticides"
+                  fill
+                  style={{ objectFit: "cover" }}
+                  className="group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent">
+                  <div className="absolute bottom-0 p-4">
+                    <h3 className="text-xl font-bold text-white">Pesticides</h3>
+                    <p className="text-white/80 text-sm mt-1">
+                      Protect your crops from pests and diseases
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </Link>
+
+            {/* Fertilizers Category */}
+            <Link href="/products?category=fertilizers" className="group">
+              <div className="relative h-60 rounded-lg overflow-hidden">
+                <Image
+                  src="https://images.unsplash.com/photo-1620663058348-8c7842a2deb4?q=80&w=600&auto=format&fit=crop"
+                  alt="Fertilizers"
+                  fill
+                  style={{ objectFit: "cover" }}
+                  className="group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent">
+                  <div className="absolute bottom-0 p-4">
+                    <h3 className="text-xl font-bold text-white">
+                      Fertilizers
+                    </h3>
+                    <p className="text-white/80 text-sm mt-1">
+                      Nutrient-rich solutions for optimal growth
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </Link>
+
+            {/* Tools Category */}
+            <Link href="/products?category=tools" className="group">
+              <div className="relative h-60 rounded-lg overflow-hidden">
+                <Image
+                  src="https://images.unsplash.com/photo-1603912699214-92627f304eb6?q=80&w=600&auto=format&fit=crop"
+                  alt="Agricultural Tools"
+                  fill
+                  style={{ objectFit: "cover" }}
+                  className="group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent">
+                  <div className="absolute bottom-0 p-4">
+                    <h3 className="text-xl font-bold text-white">
+                      Agricultural Tools
+                    </h3>
+                    <p className="text-white/80 text-sm mt-1">
+                      Essential tools for efficient farming
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-2">
+            What Our Customers Say
+          </h2>
+          <p className="text-gray-600 text-center mb-10">
+            Trusted by farmers across the country
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* Testimonial 1 */}
+            <div className="bg-white p-6 rounded-lg shadow">
+              <div className="flex items-center mb-4">
+                <div className="relative w-12 h-12 rounded-full overflow-hidden mr-4">
+                  <Image
+                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop"
+                    alt="Customer"
+                    fill
+                    style={{ objectFit: "cover" }}
+                  />
+                </div>
+                <div>
+                  <h4 className="font-bold">Rajesh Kumar</h4>
+                  <p className="text-sm text-gray-600">Rice Farmer</p>
+                </div>
+              </div>
+              <p className="text-gray-700">
+                "The hybrid rice seeds I purchased from Amma Agro Agencies
+                yielded an excellent harvest despite the drought conditions.
+                Highly recommended!"
+              </p>
+            </div>
+
+            {/* Testimonial 2 */}
+            <div className="bg-white p-6 rounded-lg shadow">
+              <div className="flex items-center mb-4">
+                <div className="relative w-12 h-12 rounded-full overflow-hidden mr-4">
+                  <Image
+                    src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=200&auto=format&fit=crop"
+                    alt="Customer"
+                    fill
+                    style={{ objectFit: "cover" }}
+                  />
+                </div>
+                <div>
+                  <h4 className="font-bold">Priya Sharma</h4>
+                  <p className="text-sm text-gray-600">Vegetable Grower</p>
+                </div>
+              </div>
+              <p className="text-gray-700">
+                "Their organic fertilizers have made a noticeable difference in
+                my vegetable garden. My tomatoes and peppers have never looked
+                better!"
+              </p>
+            </div>
+
+            {/* Testimonial 3 */}
+            <div className="bg-white p-6 rounded-lg shadow">
+              <div className="flex items-center mb-4">
+                <div className="relative w-12 h-12 rounded-full overflow-hidden mr-4">
+                  <Image
+                    src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=200&auto=format&fit=crop"
+                    alt="Customer"
+                    fill
+                    style={{ objectFit: "cover" }}
+                  />
+                </div>
+                <div>
+                  <h4 className="font-bold">Anil Patel</h4>
+                  <p className="text-sm text-gray-600">Commercial Farmer</p>
+                </div>
+              </div>
+              <p className="text-gray-700">
+                "I've been using their pesticides for years and they
+                consistently help protect my crops. The staff is knowledgeable
+                and always provides great advice."
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="bg-green-700 text-white py-16">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold mb-4">
+            Ready to Boost Your Agricultural Productivity?
+          </h2>
+          <p className="text-xl mb-8 max-w-2xl mx-auto">
+            Visit our store or contact us today to explore our complete range of
+            agricultural products.
+          </p>
+          <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+            <Button
+              asChild
+              size="lg"
+              className="bg-white text-green-700 hover:bg-gray-100"
+            >
+              <Link href="/products">Explore Products</Link>
+            </Button>
+            <Button
+              asChild
+              variant="outline"
+              size="lg"
+              className="border-white text-white hover:bg-green-800"
+            >
+              <Link href="/contact">Contact Us</Link>
+            </Button>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
