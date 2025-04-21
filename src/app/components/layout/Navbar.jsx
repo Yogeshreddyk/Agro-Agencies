@@ -21,6 +21,7 @@ const Navbar = () => {
           </span>
         </Link>
 
+        {/* Desktop Navigation */}
         <nav className="hidden md:flex md:items-center md:gap-6">
           <Link href="/" className="text-sm font-medium hover:text-green-700">
             Home
@@ -46,14 +47,12 @@ const Navbar = () => {
         </nav>
 
         <div className="hidden md:flex md:items-center md:gap-4">
-          {/* <Button variant="ghost" size="icon">
-            <ShoppingCart className="h-5 w-5" />
-          </Button> */}
           <Button variant="default" className="bg-green-700 hover:bg-green-800">
             Get in Touch
           </Button>
         </div>
 
+        {/* Mobile Menu Button */}
         <Button
           variant="ghost"
           size="icon"
@@ -68,6 +67,7 @@ const Navbar = () => {
         </Button>
       </div>
 
+      {/* Mobile Navigation */}
       {isMenuOpen && (
         <div className="container mx-auto md:hidden">
           <nav className="flex flex-col space-y-4 px-4 py-6">
