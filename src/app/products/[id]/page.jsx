@@ -2,12 +2,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, Check, ShoppingCart } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import {
   getProductById,
   getProductsByCategory,
   products,
 } from "@/lib/data/products";
+import { Button } from "@/app/components/ui/button";
 
 export async function generateStaticParams() {
   return products.map((product) => ({
@@ -72,7 +72,7 @@ export default function ProductPage({ params }) {
 
           <div className="flex items-center mb-4">
             <span
-              className={`text-sm px-2 py-1 rounded-full mr-3 ${
+              className={`text-sm px-2 py-1 rounded-full mr-3 ₹{
                 product.stockStatus === "in-stock"
                   ? "bg-green-100 text-green-800"
                   : product.stockStatus === "low-stock"
@@ -96,7 +96,7 @@ export default function ProductPage({ params }) {
           </div>
 
           <div className="text-2xl font-bold text-green-700 mb-6">
-            ${product.price.toFixed(2)}
+            ₹{product.price.toFixed(2)}
           </div>
 
           <p className="text-gray-700 mb-8">{product.description}</p>
@@ -151,7 +151,7 @@ export default function ProductPage({ params }) {
                   {relatedProduct.description}
                 </p>
                 <p className="text-green-700 font-bold mt-2">
-                  ${relatedProduct.price.toFixed(2)}
+                  ₹{relatedProduct.price.toFixed(2)}
                 </p>
               </Link>
             ))}
