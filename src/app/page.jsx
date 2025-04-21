@@ -15,8 +15,8 @@ import {
   CardContent,
 } from "./components/ui/Card";
 
-export default function Home() {
-  const featuredProducts = getFeaturedProducts();
+export default async function Home() {
+  const featuredProducts = await getFeaturedProducts();
 
   return (
     <div className="flex flex-col">
@@ -108,7 +108,7 @@ export default function Home() {
                 <CardContent className="flex-grow">
                   <div className="flex items-center justify-between">
                     <span className="text-lg font-bold">
-                      ${product.price.toFixed(2)}
+                      ₹{product.price.toFixed(2)}
                     </span>
                     <span
                       className={`text-xs px-2 py-1 rounded-full ${
@@ -263,14 +263,14 @@ export default function Home() {
                   />
                 </div>
                 <div>
-                  <h4 className="font-bold">Rajesh Kumar</h4>
+                  <h4 className="font-bold">Shiva Kumar</h4>
                   <p className="text-sm text-gray-600">Rice Farmer</p>
                 </div>
               </div>
               <p className="text-gray-700">
-                "The hybrid rice seeds I purchased from Amma Agro Agencies
+                &quot;The hybrid rice seeds I purchased from Amma Agro Agencies
                 yielded an excellent harvest despite the drought conditions.
-                Highly recommended!"
+                Highly recommended!&quot;
               </p>
             </div>
 
@@ -279,21 +279,21 @@ export default function Home() {
               <div className="flex items-center mb-4">
                 <div className="relative w-12 h-12 rounded-full overflow-hidden mr-4">
                   <Image
-                    src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=200&auto=format&fit=crop"
+                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop"
                     alt="Customer"
                     fill
                     style={{ objectFit: "cover" }}
                   />
                 </div>
                 <div>
-                  <h4 className="font-bold">Priya Sharma</h4>
+                  <h4 className="font-bold">Krishna</h4>
                   <p className="text-sm text-gray-600">Vegetable Grower</p>
                 </div>
               </div>
               <p className="text-gray-700">
-                "Their organic fertilizers have made a noticeable difference in
-                my vegetable garden. My tomatoes and peppers have never looked
-                better!"
+                &quot;Their organic fertilizers have made a noticeable
+                difference in my vegetable garden. My tomatoes and peppers have
+                never looked better!&quot;
               </p>
             </div>
 
@@ -302,21 +302,21 @@ export default function Home() {
               <div className="flex items-center mb-4">
                 <div className="relative w-12 h-12 rounded-full overflow-hidden mr-4">
                   <Image
-                    src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=200&auto=format&fit=crop"
+                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop"
                     alt="Customer"
                     fill
                     style={{ objectFit: "cover" }}
                   />
                 </div>
                 <div>
-                  <h4 className="font-bold">Anil Patel</h4>
+                  <h4 className="font-bold">Ram Reddy</h4>
                   <p className="text-sm text-gray-600">Commercial Farmer</p>
                 </div>
               </div>
               <p className="text-gray-700">
-                "I've been using their pesticides for years and they
+                &quot;I&apos;ve been using their pesticides for years and they
                 consistently help protect my crops. The staff is knowledgeable
-                and always provides great advice."
+                and always provides great advice.&quot;
               </p>
             </div>
           </div>
@@ -345,7 +345,7 @@ export default function Home() {
               asChild
               variant="outline"
               size="lg"
-              className="border-white text-white hover:bg-green-800"
+              className="border-white text-green-500 hover:bg-green-800"
             >
               <Link href="/contact">Contact Us</Link>
             </Button>
