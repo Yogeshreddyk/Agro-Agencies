@@ -1,10 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import {
-  getFeaturedProducts,
-  getProductsByCategory,
-} from "@/lib/data/products";
 import { Button } from "./components/ui/button";
 import {
   Card,
@@ -14,9 +10,10 @@ import {
   CardDescription,
   CardContent,
 } from "./components/ui/Card";
+import { getFeaturedProducts } from "@/lib/data/products";
 
-export default async function Home() {
-  const featuredProducts = await getFeaturedProducts();
+export default function Home() {
+  const featuredProducts = getFeaturedProducts();
 
   return (
     <div className="flex flex-col">
