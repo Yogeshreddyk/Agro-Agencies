@@ -24,7 +24,7 @@ export default function AboutPage() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16 items-center">
         <div className="relative h-80 md:h-[400px] rounded-lg overflow-hidden">
           <Image
-            src="https://images.unsplash.com/photo-1592982537447-7440770faae9?q=80&w=2070&auto=format&fit=crop"
+            src="https://thumbs.dreamstime.com/b/indian-farmer-holding-crop-plant-his-wheat-field-indian-farmer-holding-crop-plant-his-wheat-field-123557695.jpg"
             alt="Farmers in field"
             fill
             style={{ objectFit: "cover" }}

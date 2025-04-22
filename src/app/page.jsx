@@ -150,7 +150,7 @@ export default function Home() {
             <Link href="/products?category=seeds" className="group">
               <div className="relative h-60 rounded-lg overflow-hidden">
                 <Image
-                  src="https://images.unsplash.com/photo-1584813470613-5b1c1cad3a69?q=80&w=600&auto=format&fit=crop"
+                  src="https://articles-1mg.gumlet.io/articles/wp-content/uploads/2016/12/seeds.jpg?compress=true&quality=80&w=640&dpr=1"
                   alt="Seeds"
                   fill
                   style={{ objectFit: "cover" }}
@@ -171,7 +171,7 @@ export default function Home() {
             <Link href="/products?category=pesticides" className="group">
               <div className="relative h-60 rounded-lg overflow-hidden">
                 <Image
-                  src="https://images.unsplash.com/photo-1585673542330-2aa0400ea9b6?q=80&w=600&auto=format&fit=crop"
+                  src="https://agriplexindia.com/cdn/shop/collections/Insecticides.png?v=1714216643&width=640"
                   alt="Pesticides"
                   fill
                   style={{ objectFit: "cover" }}
@@ -192,7 +192,7 @@ export default function Home() {
             <Link href="/products?category=fertilizers" className="group">
               <div className="relative h-60 rounded-lg overflow-hidden">
                 <Image
-                  src="https://images.unsplash.com/photo-1620663058348-8c7842a2deb4?q=80&w=600&auto=format&fit=crop"
+                  src="https://humicfactory.com/assets/images/blogs/1736169650107webp.webp"
                   alt="Fertilizers"
                   fill
                   style={{ objectFit: "cover" }}

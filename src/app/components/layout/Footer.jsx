@@ -136,7 +136,8 @@ const Footer = () => {
               <li className="flex items-start space-x-3">
                 <MapPin size={18} className="text-green-700 mt-0.5" />
                 <span className="text-sm text-gray-600">
-                  123 Farm Road, Agricultural District, YourCity
+                  Ward 1, Rupanagudi road, Shankarabanda,
+                  <br /> Ballari District, Karnataka - 583102
                 </span>
               </li>
               <li className="flex items-center space-x-3">
