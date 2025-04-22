@@ -34,7 +34,7 @@ export default function AboutPage() {
         <div>
           <h2 className="text-2xl font-bold mb-4">Our Story</h2>
           <p className="text-gray-700 mb-4">
-            Amma Agro Agencies was founded in 2005 with a simple mission: to
+            Amma Agro Agencies was founded in 2018 with a simple mission: to
             provide farmers with high-quality agricultural products that improve
             yield, sustainability, and profitability.
           </p>
@@ -122,7 +122,7 @@ export default function AboutPage() {
             <h3 className="text-xl font-bold">Hema Reddy</h3>
             <p className="text-gray-600">Founder</p>
             <p className="text-gray-700 mt-2">
-              Agricultural scientist with over 25 years of experience in crop
+              Agricultural farmer with over 20 years of experience in crop
               research and farming solutions.
             </p>
           </div>
@@ -139,8 +139,8 @@ export default function AboutPage() {
             <h3 className="text-xl font-bold">Pandu Ranga</h3>
             <p className="text-gray-600">Co-Founder</p>
             <p className="text-gray-700 mt-2">
-              Supply chain expert ensuring our products reach farmers when they
-              need them most.
+              Agricultural farmer with over 20 years of experience in crop
+              research and farming solutions.
             </p>
           </div>
 
@@ -156,8 +156,8 @@ export default function AboutPage() {
             <h3 className="text-xl font-bold">Prashanth Reddy</h3>
             <p className="text-gray-600">Agricultural Expert</p>
             <p className="text-gray-700 mt-2">
-              PhD in Agronomy providing technical expertise and innovative
-              solutions to complex farming challenges.
+              Agricultural farmer with over 8 years of experience in crop
+              research and farming solutions.
             </p>
           </div>
         </div>
