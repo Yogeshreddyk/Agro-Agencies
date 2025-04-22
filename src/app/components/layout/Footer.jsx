@@ -6,6 +6,7 @@ import {
   Facebook,
   Twitter,
   Instagram,
+  MessageCircle,
 } from "lucide-react";
 
 const Footer = () => {
@@ -42,6 +43,13 @@ const Footer = () => {
                 className="text-gray-500 hover:text-green-700"
               >
                 <Instagram size={20} />
+              </a>
+              <a
+                href="https://whatsapp.com"
+                aria-label="Whatsapp"
+                className="text-gray-500 hover:text-green-700"
+              >
+                <MessageCircle size={20} />
               </a>
             </div>
           </div>
@@ -128,16 +136,19 @@ const Footer = () => {
               <li className="flex items-start space-x-3">
                 <MapPin size={18} className="text-green-700 mt-0.5" />
                 <span className="text-sm text-gray-600">
-                  123 Farm Road, Agricultural District, YourCity
+                  Ward 1, Rupanagudi road, Shankarabanda,
+                  <br /> Ballari District, Karnataka - 583102
                 </span>
               </li>
               <li className="flex items-center space-x-3">
                 <Phone size={18} className="text-green-700" />
-                <span className="text-sm text-gray-600">+1 (123) 456-7890</span>
+                <span className="text-sm text-gray-600">+91 9206662292</span>
               </li>
               <li className="flex items-center space-x-3">
                 <Mail size={18} className="text-green-700" />
-                <span className="text-sm text-gray-600">info@ammaagro.com</span>
+                <span className="text-sm text-gray-600">
+                  reddykyogesh@gmail.com
+                </span>
               </li>
             </ul>
           </div>

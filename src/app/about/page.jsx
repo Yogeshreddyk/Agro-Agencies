@@ -24,7 +24,7 @@ export default function AboutPage() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16 items-center">
         <div className="relative h-80 md:h-[400px] rounded-lg overflow-hidden">
           <Image
-            src="https://images.unsplash.com/photo-1592982537447-7440770faae9?q=80&w=2070&auto=format&fit=crop"
+            src="https://thumbs.dreamstime.com/b/indian-farmer-holding-crop-plant-his-wheat-field-indian-farmer-holding-crop-plant-his-wheat-field-123557695.jpg"
             alt="Farmers in field"
             fill
             style={{ objectFit: "cover" }}
@@ -34,7 +34,7 @@ export default function AboutPage() {
         <div>
           <h2 className="text-2xl font-bold mb-4">Our Story</h2>
           <p className="text-gray-700 mb-4">
-            Amma Agro Agencies was founded in 2005 with a simple mission: to
+            Amma Agro Agencies was founded in 2018 with a simple mission: to
             provide farmers with high-quality agricultural products that improve
             yield, sustainability, and profitability.
           </p>
@@ -122,7 +122,7 @@ export default function AboutPage() {
             <h3 className="text-xl font-bold">Hema Reddy</h3>
             <p className="text-gray-600">Founder</p>
             <p className="text-gray-700 mt-2">
-              Agricultural scientist with over 25 years of experience in crop
+              Agricultural farmer with over 20 years of experience in crop
               research and farming solutions.
             </p>
           </div>
@@ -139,8 +139,8 @@ export default function AboutPage() {
             <h3 className="text-xl font-bold">Pandu Ranga</h3>
             <p className="text-gray-600">Co-Founder</p>
             <p className="text-gray-700 mt-2">
-              Supply chain expert ensuring our products reach farmers when they
-              need them most.
+              Agricultural farmer with over 20 years of experience in crop
+              research and farming solutions.
             </p>
           </div>
 
@@ -156,8 +156,8 @@ export default function AboutPage() {
             <h3 className="text-xl font-bold">Prashanth Reddy</h3>
             <p className="text-gray-600">Agricultural Expert</p>
             <p className="text-gray-700 mt-2">
-              PhD in Agronomy providing technical expertise and innovative
-              solutions to complex farming challenges.
+              Agricultural farmer with over 8 years of experience in crop
+              research and farming solutions.
             </p>
           </div>
         </div>

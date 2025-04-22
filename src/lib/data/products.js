@@ -6,7 +6,7 @@ export const products = [
     category: "seeds",
     price: 49.99,
     image:
-      "https://images.unsplash.com/photo-1584813470613-5b1c1cad3a69?q=80&w=600&auto=format&fit=crop",
+      "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSIdjh8iCRXMU_i3t8uOOXeH6tcr3vLNkci3MU1xHqdjvFUBotBsJcMpFfmr2i1BsjdhDHzoldO3YvHg_F-X0BePNAcj4RNG_0uGVi5YsY",
     featured: true,
     stockStatus: "in-stock",
   },
@@ -17,7 +17,7 @@ export const products = [
     category: "pesticides",
     price: 75.5,
     image:
-      "https://images.unsplash.com/photo-1585673542330-2aa0400ea9b6?q=80&w=600&auto=format&fit=crop",
+      "https://agriplexindia.com/cdn/shop/collections/Insecticides.png?v=1714216643&width=640",
     featured: true,
     stockStatus: "in-stock",
   },
@@ -28,7 +28,7 @@ export const products = [
     category: "fertilizers",
     price: 62.25,
     image:
-      "https://images.unsplash.com/photo-1620663058348-8c7842a2deb4?q=80&w=600&auto=format&fit=crop",
+      "https://humicfactory.com/assets/images/blogs/1736169650107webp.webp",
     featured: true,
     stockStatus: "in-stock",
   },
