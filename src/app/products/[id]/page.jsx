@@ -114,9 +114,6 @@ export default function ProductPage({ params }) {
           </div>
 
           <div className="mt-auto">
-            <Button className="w-full bg-green-700 hover:bg-green-800 mb-3">
-              <ShoppingCart className="mr-2 h-5 w-5" /> Add to Cart
-            </Button>
             <Button asChild variant="outline" className="w-full">
               <Link href="/contact">Request More Information</Link>
             </Button>

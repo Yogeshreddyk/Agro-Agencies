@@ -40,7 +40,7 @@ export default function Home() {
                 asChild
                 variant="outline"
                 size="lg"
-                className="border-white text-white hover:bg-green-800"
+                className="border-white text-green-400 bg-white hover:bg-green-800"
               >
                 <Link href="/contact">Contact Us</Link>
               </Button>
