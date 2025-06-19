@@ -100,20 +100,44 @@ export default function ContactPage() {
         <div>
           <h2 className="text-2xl font-bold mb-6">Send a Message</h2>
 
-          <form className="space-y-6">
+          <form
+            className="space-y-6"
+            action="https://formspree.io/f/manjbzpa"
+            method="POST"
+          >
+            <input
+              type="hidden"
+              name="_subject"
+              value="New Contact Submission"
+            />
+            <input
+              type="hidden"
+              name="_next"
+              value="https://yourdomain.com/thank-you"
+            />
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div className="space-y-2">
                 <label htmlFor="firstName" className="text-sm font-medium">
                   First Name
                 </label>
-                <Input id="firstName" placeholder="John" required />
+                <Input
+                  id="firstName"
+                  name="firstName"
+                  placeholder="John"
+                  required
+                />
               </div>
 
               <div className="space-y-2">
                 <label htmlFor="lastName" className="text-sm font-medium">
                   Last Name
                 </label>
-                <Input id="lastName" placeholder="Doe" required />
+                <Input
+                  id="lastName"
+                  name="lastName"
+                  placeholder="Doe"
+                  required
+                />
               </div>
             </div>
 
@@ -123,6 +147,7 @@ export default function ContactPage() {
               </label>
               <Input
                 id="email"
+                name="email"
                 type="email"
                 placeholder="john@gmail.com"
                 required
@@ -133,26 +158,31 @@ export default function ContactPage() {
               <label htmlFor="phone" className="text-sm font-medium">
                 Phone Number
               </label>
-              <Input id="phone" type="tel" placeholder="+91 9000090000" />
+              <Input
+                id="phone"
+                name="phone"
+                type="tel"
+                placeholder="+91 9000090000"
+              />
             </div>
 
             <div className="space-y-2">
               <label htmlFor="subject" className="text-sm font-medium">
                 Subject
               </label>
-              <Input id="subject" placeholder="Product Inquiry" required />
+              <Input
+                id="subject"
+                name="subject"
+                placeholder="Product Inquiry"
+                required
+              />
             </div>
 
             <div className="space-y-2">
               <label htmlFor="message" className="text-sm font-medium">
                 Message
               </label>
-              <Textarea
-                id="message"
-                placeholder="I'm interested in learning more about your seed products..."
-                rows={6}
-                required
-              />
+              <Textarea id="message" name="message" rows={6} required />
             </div>
 
             <Button
